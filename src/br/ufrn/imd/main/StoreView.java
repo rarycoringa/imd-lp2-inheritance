@@ -3,6 +3,7 @@ package br.ufrn.imd.main;
 import java.util.Calendar;
 
 import br.ufrn.imd.domain.DurableProduct;
+import br.ufrn.imd.domain.NonDurableProduct;
 
 public class StoreView {
 	public static void main(String[] args) {
@@ -34,5 +35,9 @@ public class StoreView {
 		phone.setDescription("A futuristic phone");
 		phone.setProductionDate(productionDate.getTime());
 		phone.setDurability(5);
+		
+		NonDurableProduct chocolate = new NonDurableProduct(); //to be done
+		NonDurableProduct towel = new NonDurableProduct(); // to be done
+		NonDurableProduct soap = new NonDurableProduct(); // to be done
 	}
 }
