@@ -8,12 +8,6 @@ public class NonDurableProduct extends Product {
 	private Date expirationDate;
 	private String genre;
 	
-	public NonDurableProduct(String name, double price, String brand, String description, Date productionDate, Date expirationDate, String genre) {
-		super(name, price, brand, description, productionDate);
-		this.expirationDate = expirationDate;
-		this.genre = genre;
-	}
-	
 	public Date getExpirationDate() {
 		return expirationDate;
 	}

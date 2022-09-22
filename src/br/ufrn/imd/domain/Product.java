@@ -9,14 +9,6 @@ public class Product {
 	private String description;
 	private Date productionDate;
 	
-	public Product(String name, double price, String brand, String description, Date productionDate) {
-		this.name = name;
-		this.price = price;
-		this.brand = brand;
-		this.description = description;
-		this.productionDate = productionDate;
-	}
-	
 	public String getName() {
 		return name;
 	}
