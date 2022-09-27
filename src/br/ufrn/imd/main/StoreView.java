@@ -2,6 +2,7 @@ package br.ufrn.imd.main;
 
 import java.util.Calendar;
 
+import br.ufrn.imd.domain.Product;
 import br.ufrn.imd.domain.DurableProduct;
 import br.ufrn.imd.domain.NonDurableProduct;
 import br.ufrn.imd.domain.Deposit;
@@ -14,7 +15,7 @@ public class StoreView {
 		productionDate.set(Calendar.YEAR, 2022);
 		
 		DurableProduct car = new DurableProduct();
-		car.setName("M3");
+		car.setName("BMW M3");
 		car.setPrice(69900.00);
 		car.setBrand("BMW");
 		car.setDescription("An amazing car");
@@ -65,5 +66,22 @@ public class StoreView {
 		soap.setGenre("Hygiene");
 		
 		Deposit deposit = new Deposit();
+		deposit.addProduct(car);
+		deposit.addProduct(book);
+		deposit.addProduct(phone);
+		deposit.addProduct(chocolate);
+		deposit.addProduct(towel);
+		deposit.addProduct(soap);
+	
+		System.out.println("Products quantity: " + deposit.getProductsQuantity());
+		
+		Product product_most_expensive = deposit.getProductMostExpensive();
+		System.out.println("Product most expensive: " + product_most_expensive.getName());
+		
+		deposit.removeProduct(car);
+		System.out.println("Products quantity: " + deposit.getProductsQuantity());
+		
+		product_most_expensive = deposit.getProductMostExpensive();
+		System.out.println("Product most expensive: " + product_most_expensive.getName());
 	}
 }
