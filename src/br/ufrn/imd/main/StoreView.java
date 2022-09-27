@@ -4,6 +4,7 @@ import java.util.Calendar;
 
 import br.ufrn.imd.domain.DurableProduct;
 import br.ufrn.imd.domain.NonDurableProduct;
+import br.ufrn.imd.domain.Deposit;
 
 public class StoreView {
 	public static void main(String[] args) {
@@ -36,8 +37,33 @@ public class StoreView {
 		phone.setProductionDate(productionDate.getTime());
 		phone.setDurability(5);
 		
-		NonDurableProduct chocolate = new NonDurableProduct(); //to be done
-		NonDurableProduct towel = new NonDurableProduct(); // to be done
-		NonDurableProduct soap = new NonDurableProduct(); // to be done
+		NonDurableProduct chocolate = new NonDurableProduct();
+		chocolate.setName("KitKat");
+		chocolate.setPrice(1.99);
+		chocolate.setBrand("Nestlé");
+		chocolate.setDescription("An amazing wafer");
+		chocolate.setProductionDate(productionDate.getTime());
+		chocolate.setExpirationDate(productionDate.getTime());
+		chocolate.setGenre("Food");
+
+		NonDurableProduct towel = new NonDurableProduct();
+		towel.setName("Buddemeyer Luxus");
+		towel.setPrice(18.45);
+		towel.setBrand("Buddemeyer");
+		towel.setDescription("A comfortable towel");
+		towel.setProductionDate(productionDate.getTime());
+		towel.setExpirationDate(productionDate.getTime());
+		towel.setGenre("Bed, table and bath");
+
+		NonDurableProduct soap = new NonDurableProduct();
+		soap.setName("Lifebuoy Total 10");
+		soap.setPrice(4.89);
+		soap.setBrand("Lifebuoy");
+		soap.setDescription("A clean soap");
+		soap.setProductionDate(productionDate.getTime());
+		soap.setExpirationDate(productionDate.getTime());
+		soap.setGenre("Hygiene");
+		
+		Deposit deposit = new Deposit();
 	}
 }
