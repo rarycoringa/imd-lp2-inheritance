@@ -24,7 +24,9 @@ public class Deposit {
 		return this.products.size();
 	}
 	
-	// verify if deposit is empty
+	public boolean isEmpty() {
+		return this.products.isEmpty();
+	}
 	
 	// get more expensive product
 }
