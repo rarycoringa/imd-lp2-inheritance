@@ -12,11 +12,17 @@ public class Deposit {
 		this.products = new ArrayList<Product>();
 	}
 	
-	// add products
+	public void addProduct(Product product) {
+		this.products.add(product);
+	}
 	
-	// remove products
+	public void removeProduct(Product product) {
+		this.products.remove(product);
+	}
 	
-	// get products length
+	public int getProductsQuantity() {
+		return this.products.size();
+	}
 	
 	// verify if deposit is empty
 	
