@@ -1,12 +1,11 @@
 package br.ufrn.imd.domain;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import br.ufrn.imd.domain.Product;
 
 public class Deposit {
-	private List<Product> products;
+	private ArrayList<Product> products;
 	
 	public Deposit() {
 		this.products = new ArrayList<Product>();
@@ -28,5 +27,15 @@ public class Deposit {
 		return this.products.isEmpty();
 	}
 	
-	// get more expensive product
+	public Product getProductMostExpensive() {
+		Product product_most_expensive = this.products.get(0);
+		
+		for(Product product : this.products) {
+			if (product.getPrice() >= product_most_expensive.getPrice()) {
+				product_most_expensive = product;
+			}
+		}
+		
+		return product_most_expensive;
+	}
 }
